@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="NIS HUB — территория талантов и возможностей NIS Turkistan">
+  <title>NIS HUB — Территория талантов и возможностей</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.NIS_HUB_CONFIG = {
+      supabaseUrl: "https://pigilnbslkfyhrpkgupj.supabase.co",
+      supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpZ2lsbmJzbGtmeWhycGtndXBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUxMDQzNDEsImV4cCI6MjExMDY4MDM0MX0.hZNzmcGipVB6K-DmEftgAostq-TMA9fV6ZYFswBCm08",
+      botApiUrl: "https://YOUR-RENDER-SERVICE.onrender.com"
+    };
+  </script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Основная навигация">
+      <a class="brand" href="#" data-nav="home" aria-label="NIS HUB — главная">
+        <span class="brand-mark">NIS</span>
+        <span><strong>NIS HUB</strong><small>ТЕРРИТОРИЯ ВОЗМОЖНОСТЕЙ</small></span>
+      </a>
+      <div class="campus-pill"><span class="pulse-dot"></span> NIS Turkistan</div>
+      <nav class="side-nav">
+        <button class="nav-link active" data-nav="home"><span>⌂</span> Главная</button>
+        <button class="nav-link" data-nav="clubs"><span>◈</span> Каталог кружков</button>
+        <button class="nav-link" data-nav="passion"><span>✦</span> AI-подбор</button>
+        <button class="nav-link" data-nav="events"><span>▦</span> События</button>
+        <button class="nav-link" data-nav="community"><span>◎</span> Сообщество</button>
+        <button class="nav-link" data-nav="create"><span>＋</span> Создать клуб</button>
+        <button class="nav-link" data-nav="profile"><span>◉</span> Мой профиль</button>
+      </nav>
+      <div class="sidebar-note">
+        <span class="note-icon">✦</span>
+        <strong>Твой талант<br>начинается здесь</strong>
+        <p>Пробуй новое, находи команду и создавай своё.</p>
+        <button class="text-button" data-nav="passion">Найти свой путь <span>→</span></button>
+      </div>
+      <div class="sidebar-footer">Создано для сообщества NIS Turkistan</div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">NIS</span><strong>NIS HUB</strong></div>
+        <div class="breadcrumb"><span>Сообщество</span><b>/</b><strong id="page-breadcrumb">Главная</strong></div>
+        <div class="topbar-actions">
+          <span class="campus-tag"><span class="pulse-dot"></span> Turkistan</span>
+          <button class="profile-button" data-nav="profile" aria-label="Открыть профиль">
+            <span class="avatar" id="header-avatar">У</span>
+            <span class="profile-button-text"><strong id="header-name">Ученик NIS</strong><small id="header-grade">Участник сообщества</small></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-home" aria-labelledby="welcome-title">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="eyebrow-star">✦</span> ТВОЯ ШКОЛА — ТВОЯ ВСЕЛЕННАЯ</span>
+            <h1 id="welcome-title">Территория<br><span>талантов</span> и возможностей</h1>
+            <p>Открывай новые интересы, находи команду и превращай идеи в реальные проекты.</p>
+            <div class="hero-actions">
+              <button class="button button-primary" data-nav="clubs">Исследовать кружки <span>→</span></button>
+              <button class="button button-quiet" data-nav="passion"><span class="button-spark">✦</span> Подобрать с AI</button>
+            </div>
+            <div class="hero-proof"><span class="proof-avatars"><i>А</i><i>Н</i><i>М</i><b>+</b></span><span>Растём и создаём вместе</span></div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+            <div class="art-sun">✦</div><div class="art-card art-card-top"><span>🤖</span><b>Идеи → проекты</b></div>
+            <div class="art-core"><div class="core-ring"></div><span>NIS</span><small>NIS<br>TURKISTAN</small></div>
+            <div class="art-card art-card-bottom"><span>🌱</span><b>Твой следующий шаг</b></div>
+            <span class="art-spark spark-a">✧</span><span class="art-spark spark-b">✦</span>
+          </div>
+          <div class="hero-index">01 <span>/</span> 07</div>
+        </div>
+
+        <div class="section-heading home-heading">
+          <div><span class="eyebrow">ТВОЯ ТОЧКА СТАРТА</span><h2>Куда сегодня?</h2></div>
+          <button class="text-button" data-nav="clubs">Все возможности <span>→</span></button>
+        </div>
+        <div class="quick-grid">
+          <button class="quick-card quick-violet" data-nav="clubs"><span class="quick-icon">◈</span><span class="quick-number">01</span><strong>Найти кружок</strong><small>Выбери то, что зажигает</small><span class="quick-arrow">↗</span></button>
+          <button class="quick-card quick-peach" data-nav="passion"><span class="quick-icon">✦</span><span class="quick-number">02</span><strong>Узнать себя</strong><small>Попроси AI подобрать направление</small><span class="quick-arrow">↗</span></button>
+          <button class="quick-card quick-mint" data-nav="community"><span class="quick-icon">◎</span><span class="quick-number">03</span><strong>Собрать команду</strong><small>Найди единомышленников для идеи</small><span class="quick-arrow">↗</span></button>
+          <button class="quick-card quick-blue" data-nav="create"><span class="quick-icon">＋</span><span class="quick-number">04</span><strong>Создать своё</strong><small>Предложи новый школьный клуб</small><span class="quick-arrow">↗</span></button>
+        </div>
+        <div class="section-heading club-preview-heading">
+          <div><span class="eyebrow">МЕСТА, ГДЕ РОЖДАЮТСЯ ИДЕИ</span><h2>Популярные кружки</h2></div>
+          <button class="text-button" data-nav="clubs">Каталог кружков <span>→</span></button>
+        </div>
+        <div class="club-grid compact-grid" id="home-club-grid"></div>
+      </section>
+
+      <section class="view" id="view-clubs" aria-labelledby="clubs-title">
+        <div class="page-intro">
+          <span class="eyebrow">ВЫБИРАЙ И ПРОБУЙ</span><h1 id="clubs-title">Каталог кружков</h1>
+          <p>Здесь найдётся пространство для каждого интереса — от технологий до искусства.</p>
+        </div>
+        <div class="filter-panel">
+          <label class="search-field"><span>⌕</span><input id="club-search" type="search" placeholder="Поиск по названию или интересу" aria-label="Поиск кружков"></label>
+          <div class="filter-chips" id="club-filters" aria-label="Фильтр по направлению">
+            <button class="filter-chip selected" data-filter="Все">Все направления</button>
+            <button class="filter-chip" data-filter="IT">IT</button>
+            <button class="filter-chip" data-filter="Спорт">Спорт</button>
+            <button class="filter-chip" data-filter="Творчество">Творчество</button>
+            <button class="filter-chip" data-filter="Наука">Наука</button>
+            <button class="filter-chip" data-filter="Социальные">Социальные</button>
+          </div>
+        </div>
+        <div class="results-line"><span id="club-count">Загружаем кружки…</span><span class="results-sort">NIS Turkistan · 2026</span></div>
+        <div class="club-grid" id="club-grid"></div>
+        <div class="empty-state hidden" id="club-empty"><span>⌕</span><strong>Ничего не нашлось</strong><p>Попробуй изменить фильтры или поисковый запрос.</p></div>
+      </section>
+
+      <section class="view" id="view-passion" aria-labelledby="passion-title">
+        <div class="page-intro">
+          <span class="eyebrow">ТВОЙ ПЕРСОНАЛЬНЫЙ НАВИГАТОР</span><h1 id="passion-title">Найди своё направление</h1>
+          <p>Расскажи, что тебе интересно — AI-помощник предложит кружки, с которых можно начать.</p>
+        </div>
+        <div class="passion-layout">
+          <form class="form-card passion-form" id="passion-form">
+            <div class="form-step"><span>01</span><div><h2>Что тебе нравится?</h2><p>Выбери несколько интересов</p></div></div>
+            <div class="interest-grid">
+              <label class="interest-option"><input type="checkbox" name="interest" value="Технологии и программирование"><span>🤖</span>Технологии</label>
+              <label class="interest-option"><input type="checkbox" name="interest" value="Спорт и движение"><span>⚽</span>Спорт</label>
+              <label class="interest-option"><input type="checkbox" name="interest" value="Музыка и сцена"><span>🎵</span>Музыка</label>
+              <label class="interest-option"><input type="checkbox" name="interest" value="Творчество и дизайн"><span>🎨</span>Дизайн</label>
+              <label class="interest-option"><input type="checkbox" name="interest" value="Экология и волонтёрство"><span>🌱</span>Экология</label>
+              <label class="interest-option"><input type="checkbox" name="interest" value="Логика и исследования"><span>♟</span>Логика</label>
+            </div>
+            <div class="form-row">
+              <label class="field-label">Твоя цель
+                <select id="passion-goal">
+                  <option value="Найти новое увлечение">Найти новое увлечение</option>
+                  <option value="Научиться полезному навыку">Научиться полезному навыку</option>
+                  <option value="Подготовиться к соревнованию">Подготовиться к соревнованию</option>
+                  <option value="Познакомиться с единомышленниками">Познакомиться с единомышленниками</option>
+                </select>
+              </label>
+              <label class="field-label">Свободные дни
+                <select id="passion-days">
+                  <option value="Любые дни">Любые дни</option><option value="Понедельник, среда">Пн и Ср</option>
+                  <option value="Вторник, четверг">Вт и Чт</option><option value="Пятница">Пятница</option><option value="Суббота">Суббота</option>
+                </select>
+              </label>
+            </div>
+            <label class="field-label">Или расскажи своими словами
+              <textarea id="passion-query" rows="3" maxlength="500" placeholder="Например: люблю придумывать игры и хочу научиться работать в команде…"></textarea>
+            </label>
+            <button class="button button-primary full-button" type="submit"><span class="button-spark">✦</span> Подобрать кружки <span>→</span></button>
+            <p class="form-footnote">AI — помощник для выбора, а не оценка твоих способностей.</p>
+          </form>
+          <aside class="passion-aside"><div class="ai-orb">✦<span></span></div><span class="eyebrow">УМНЫЙ СТАРТ</span><h2>У каждого таланта есть точка отсчёта</h2><p>Мы сопоставим твои интересы с кружками кампуса и объясним, почему они могут тебе подойти.</p><div class="aside-stat"><strong>8+</strong><span>направлений,<br>чтобы попробовать</span></div></aside>
+        </div>
+        <div class="recommendations hidden" id="recommendations"><div class="section-heading"><div><span class="eyebrow">ТВОЙ ПЕРСОНАЛЬНЫЙ СПИСОК</span><h2>Попробуй начать отсюда</h2></div></div><div class="club-grid" id="recommendation-grid"></div></div>
+      </section>
+
+      <section class="view" id="view-create" aria-labelledby="create-title">
+        <div class="page-intro">
+          <span class="eyebrow">ИДЕИ СТАНОВЯТСЯ СООБЩЕСТВОМ</span><h1 id="create-title">Создай свой клуб</h1>
+          <p>Не нашёл подходящий кружок? Подай заявку — поможем идее стать частью кампуса.</p>
+        </div>
+        <div class="create-layout">
+          <form class="form-card" id="club-form">
+            <div class="form-section-title"><span class="step-badge">01</span><div><h2>Расскажи об идее</h2><p>Заполни заявку — администрация рассмотрит её</p></div></div>
+            <label class="field-label">Название клуба <input name="name" required minlength="3" maxlength="80" placeholder="Например, Young Researchers Lab"></label>
+            <div class="form-row">
+              <label class="field-label">Направление
+                <select name="direction" required><option value="">Выбери направление</option><option>IT</option><option>Спорт</option><option>Творчество</option><option>Наука</option><option>Социальные</option></select>
+              </label>
+              <label class="field-label">Учитель-наставник
+                <select name="mentor" required><option value="">Выбери наставника</option><option>Алия Сейтова</option><option>Данияр Касымов</option><option>Мадина Оразова</option><option>Жанар Тулегенова</option><option>Арман Нурланов</option><option>Ерлан Беков</option><option>Айгерим Садыкова</option><option>Руслан Жумабек</option><option>Другой наставник (обсудить)</option></select>
+              </label>
+            </div>
+            <label class="field-label">Коротко о клубе <textarea name="description" required minlength="20" maxlength="600" rows="4" placeholder="Чем будут заниматься участники? Для кого этот клуб?"></textarea></label>
+            <label class="field-label">Желаемое расписание <input name="schedule" required maxlength="100" placeholder="Например, вторник после уроков"></label>
+            <button class="button button-primary full-button" type="submit">Отправить заявку <span>→</span></button>
+            <p class="form-footnote">После отправки заявка появится в профиле со статусом рассмотрения.</p>
+          </form>
+          <aside class="info-card create-info"><span class="info-illustration">💡</span><span class="eyebrow">ТВОЯ ИДЕЯ ВАЖНА</span><h2>Клуб начинается с одного предложения</h2><p>Опиши интерес, который хотел бы разделить с другими. Вместе с наставником ты сможешь продумать формат встреч и первые шаги.</p><div class="info-check"><span>✓</span> Не нужен готовый план — достаточно идеи</div><div class="info-check"><span>✓</span> Наставник поможет с организацией</div><div class="info-check"><span>✓</span> Администрация ответит на заявку</div></aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-events" aria-labelledby="events-title">
+        <div class="page-intro">
+          <span class="eyebrow">ВСТРЕЧАЙСЯ, СОЗДАВАЙ, УЧАСТВУЙ</span><h1 id="events-title">События и челленджи</h1>
+          <p>Школьные события — возможность показать свою идею и найти новых друзей.</p>
+        </div>
+        <div class="event-banner"><div><span class="eyebrow">КАЛЕНДАРЬ NIS TURKISTAN</span><h2>Следующий большой шаг — за тобой</h2><p>Выбирай событие, регистрируйся и участвуй.</p></div><span class="banner-star">✦</span></div>
+        <div class="event-grid" id="event-grid"></div>
+        <div class="empty-state hidden" id="event-empty"><span>▦</span><strong>События скоро появятся</strong><p>Загляни сюда чуть позже.</p></div>
+      </section>
+
+      <section class="view" id="view-community" aria-labelledby="community-title">
+        <div class="page-intro">
+          <span class="eyebrow">ИДЕИ ЛУЧШЕ РАСТУТ ВМЕСТЕ</span><h1 id="community-title">Найди свою команду</h1>
+          <p>Расскажи о проекте или присоединись к команде единомышленников.</p>
+        </div>
+        <div class="community-banner"><div class="community-icon">◎</div><div><strong>Здесь важны идеи и навыки</strong><p>В открытых карточках нет телефонов, личных email или Telegram-имен. Откликайся через кнопку — автор получит уведомление в Telegram.</p></div></div>
+        <div class="community-layout">
+          <div><div class="section-heading community-heading"><div><span class="eyebrow">ОТКРЫТЫЕ НАБОРЫ</span><h2>Команды ищут тебя</h2></div><span class="safe-label">● Безопасное общение</span></div><div class="team-list" id="team-list"></div><div class="empty-state hidden" id="team-empty"><span>◎</span><strong>Пока нет открытых наборов</strong><p>Создай первую заявку для своей команды.</p></div></div>
+          <form class="form-card team-form" id="team-form"><div class="form-section-title"><span class="step-badge">＋</span><div><h2>Ищешь команду?</h2><p>Опубликуй короткий набор</p></div></div>
+            <label class="field-label">Название проекта <input name="title" required minlength="4" maxlength="90" placeholder="Например, команда для хакатона"></label>
+            <label class="field-label">Тип проекта <select name="projectType"><option>Хакатон</option><option>Социальный проект</option><option>Соревнование</option><option>Учебный проект</option><option>Проект</option></select></label>
+            <label class="field-label">Что вы планируете? <textarea name="description" required minlength="15" maxlength="500" rows="4" placeholder="Коротко опиши идею и кого ищете"></textarea></label>
+            <label class="field-label">Навыки в команде <input name="skills" maxlength="120" placeholder="Например: Python, дизайн, идеи"></label>
+            <button class="button button-primary full-button" type="submit">Опубликовать набор <span>→</span></button>
+          </form>
+        </div>
+      </section>
+
+      <section class="view" id="view-profile" aria-labelledby="profile-title">
+        <div class="page-intro">
+          <span class="eyebrow">ТВОЙ ПУТЬ В NIS HUB</span><h1 id="profile-title">Мой профиль</h1>
+          <p>Собирай опыт, пробуй новое и отмечай свои достижения.</p>
+        </div>
+        <div class="profile-hero"><div class="profile-avatar-large" id="profile-avatar">У</div><div class="profile-identity"><span class="eyebrow">УЧАСТНИК СООБЩЕСТВА</span><h2 id="profile-name">Ученик NIS</h2><p><span id="profile-grade">Ученик</span><span class="identity-separator">·</span><span id="profile-shanyrak">NIS Turkistan</span></p></div><span class="profile-spark">✦</span></div>
+        <form class="profile-details-form" id="profile-details-form">
+          <label class="field-label">Класс <input id="student-grade-input" name="grade" maxlength="12" required placeholder="Например, 10A"></label>
+          <label class="field-label">Шанырак <input id="student-shanyrak-input" name="shanyrak" maxlength="50" required placeholder="Название шанырака"></label>
+          <button class="mini-button" type="submit">Сохранить данные</button>
+          <span class="profile-details-note">Класс и шанырак показываются только в карточке поиска команды.</span>
+        </form>
+        <div class="profile-columns">
+          <div class="profile-column"><div class="section-heading"><div><span class="eyebrow">МОИ ВЫБОРЫ</span><h2>Мои кружки</h2></div></div><div class="profile-list" id="my-clubs"></div>
+            <div class="section-heading profile-subheading"><div><span class="eyebrow">МОИ ИДЕИ</span><h2>Заявки на клуб</h2></div></div><div class="profile-list" id="my-proposals"></div>
+          </div>
+          <div class="profile-column"><div class="section-heading"><div><span class="eyebrow">МОЙ ПРОГРЕСС</span><h2>Достижения</h2></div></div><div class="achievement-grid" id="achievements"></div>
+            <div class="activity-card"><span class="activity-icon">✧</span><div><span class="eyebrow">СООБЩЕСТВО</span><h3>Поддерживай интерес</h3><p>Попробуй новое направление — каждый опыт помогает найти свой путь.</p></div><button class="text-button" data-nav="clubs">Исследовать <span>→</span></button></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer"><span>© NIS HUB · NIS Turkistan</span><span>Идеи. Люди. Возможности.</span></footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Навигация">
+    <button class="mobile-nav-link active" data-nav="home"><span>⌂</span><small>Главная</small></button>
+    <button class="mobile-nav-link" data-nav="clubs"><span>◈</span><small>Кружки</small></button>
+    <button class="mobile-nav-link" data-nav="passion"><span>✦</span><small>AI-подбор</small></button>
+    <button class="mobile-nav-link" data-nav="community"><span>◎</span><small>Команда</small></button>
+    <button class="mobile-nav-link" data-nav="profile"><span>◉</span><small>Профиль</small></button>
+  </nav>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
